@@ -41,7 +41,7 @@
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
-  --bs-primary-rgb: 230, 167, 86;
+  --bs-primary-rgb: 0, 0, 0;
   --bs-secondary-rgb: 47, 23, 15;
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 13, 202, 240;
@@ -3031,13 +3031,13 @@ textarea.form-control-lg {
 
 .btn-primary {
   color: #000;
-  background-color: #e6a756;
-  border-color: #e6a756;
+  background-color: #344049;
+  border-color: #001728;
 }
 .btn-primary:hover {
   color: #000;
-  background-color: #eab46f;
-  border-color: #e9b067;
+  background-color: #c5c5c5;
+  border-color: #c5c5c5;
 }
 .btn-check:focus + .btn-primary, .btn-primary:focus {
   color: #000;
@@ -11288,7 +11288,7 @@ textarea.form-control-lg {
   }
 }
 body {
-  background-image: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url("../assets/img/bg.jpg");
+  background-image: linear-gradient(rgba(0, 23, 40, 0.65), rgba(0, 23, 15, 0.65)), url("../assets/img/bg.jpg");
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -11353,7 +11353,7 @@ p {
 }
 
 #mainNav {
-  background-color: rgba(47, 23, 15, 0.9);
+  background-color: rgba(0, 23, 40, 0.9);
   font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 #mainNav .navbar-brand {
@@ -11397,7 +11397,7 @@ p {
 .cta {
   padding-top: 5rem;
   padding-bottom: 5rem;
-  background-color: rgba(230, 167, 86, 0.9);
+  background-color:  rgba(0, 23, 40, 0.4);
 }
 .cta .cta-inner {
   position: relative;
@@ -11417,7 +11417,7 @@ p {
 }
 
 .footer {
-  background-color: rgba(47, 23, 15, 0.9);
+  background-color:  rgba(0, 23, 40, 0.9);
 }
 
 .intro {
