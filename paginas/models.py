@@ -14,7 +14,7 @@ class Client(models.Model):
 class Operator(models.Model):
 
     name = models.CharField(max_length=50, help_text="Digite o nome completo do operador")
-    identification = models.DateField(help_text='Informe o CPF do operador')
+    identification = models.CharField(max_length=11, help_text='Informe o CPF do operador')
     area = models.CharField(max_length=100, help_text="Informe a área do operador")
     department = models.CharField(max_length=100, help_text="Informe o departamento do operador")
     rank = models.CharField(max_length=100, help_text="Informe o cargo do operador")

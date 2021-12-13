@@ -17,5 +17,7 @@ urlpatterns = [
     path('delete/service/<int:pk>/', ServiceDelete.as_view(), name="delete-service"),
 
     path('list/client/', ClientList.as_view(), name="list-client"),
+    path('list/operator/', OperatorList.as_view(), name="list-operator"),
+    path('list/service/', ServiceList.as_view(), name="list-service"),
 ]
 
