@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 class Client(models.Model):
@@ -26,9 +27,10 @@ class Operator(models.Model):
 class Service(models.Model):
 
     name = models.CharField(max_length=50, help_text="Digite o nome completo do operador")
-    stage = models.DateField(help_text='Informe o CPF do operador')
+    stage = models.CharField(max_length=50, help_text='Informe o CPF do operador')
     level = models.CharField(max_length=100, help_text="Informe a área do operador")
     price = models.CharField(max_length=100, help_text="Informe o departamento do operador")
+    user = models.ForeignKey(User, on_delete=models.PROTECT)
 
     def __str__(self):
         return self.name + ' - ' + str(self.stage) + ' - ' + str(self.level) + ' - ' + str(self.price)

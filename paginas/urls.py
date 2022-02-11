@@ -3,6 +3,8 @@ from .views import *
 
 urlpatterns = [
     path('', HomePage.as_view(), name='index'),
+    path('operators', Operators.as_view(), name='operators'),
+    path('services', Services.as_view(), name='services'),
 
     path('register/client/', ClientCreate.as_view(), name="register-client"),
     path('register/operator/', OperatorCreate.as_view(), name="register-operator"),

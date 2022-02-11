@@ -4,7 +4,7 @@
 
 {% block content %}
         <table class="table table-striped">
-
+            <a href="{% url 'register-service' %}" class="btn btn-success btn-sm">Cadastrar</a>
             <tr>
                 <th>Id</th>
                 <th>Nome</th>
@@ -30,7 +30,7 @@
         
             {% empty %}
             <tr>
-                <td colspan="3">Nenhum Operador Cadastrado!</td>
+                <td colspan="3">Nenhum Serviço Cadastrado!</td>
             </tr>
             {% endfor %}
         

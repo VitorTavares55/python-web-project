@@ -4,9 +4,18 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic.list import ListView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Client, Operator, Service
+from django import forms
 
 class HomePage(TemplateView):
     template_name = 'pages/index.html'
+
+class Operators(ListView):
+	model = Operator
+	template_name = 'pages/operators.html'
+
+class Services(ListView):
+	model = Service
+	template_name = 'pages/services.html'
 
 
 # --------------------------------------------------------------------------------------------- 
@@ -33,6 +42,8 @@ class ServiceCreate(LoginRequiredMixin, CreateView):
 	fields = ['name', 'stage', 'level', 'price']
 	template_name = 'pages/form.html'
 	success_url = reverse_lazy('index')
+
+
 
 # --------------------------------------------------------------------------------------------- 
 #                                      UPDATE VIEWS
@@ -88,7 +99,7 @@ class ServiceDelete(LoginRequiredMixin, DeleteView):
 class ClientList(LoginRequiredMixin, ListView):
 	login_url = reverse_lazy('login')
 	model = Client
-	template_name = 'pages/list.html'
+	template_name = 'pages/client-list.html'
 	success_url = reverse_lazy('index')
 
 class OperatorList(LoginRequiredMixin, ListView):
