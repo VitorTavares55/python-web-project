@@ -20,6 +20,7 @@ class Operator(models.Model):
     department = models.CharField(max_length=100, help_text="Informe o departamento do operador")
     rank = models.CharField(max_length=100, help_text="Informe o cargo do operador")
     payment = models.CharField(max_length=100, help_text="Informe o salário do operador")
+    user = models.ForeignKey(User, on_delete=models.PROTECT)
 
     def __str__(self):
         return self.name + ' - ' + str(self.identification) + ' - ' + str(self.area) + ' - ' + str(self.department) + ' - ' + str(self.rank) + ' - ' + str(self.payment)
